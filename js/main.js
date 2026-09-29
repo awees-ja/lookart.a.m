@@ -2,7 +2,7 @@
 const portfolioData = {
     'Latilia': {
         slug: 'latilia',
-        images: ['portfolio/latilia/page-1.jpg', 'portfolio/latilia/page-2.jpg', 'portfolio/latilia/page-3.jpg', 'portfolio/latilia/page-4.jpg', 'portfolio/latilia/page-5.jpg']
+        images: ['/yourusername.github.io/assets/portfolio/latilia/page-1.jpg', 'portfolio/latilia/page-2.jpg', 'portfolio/latilia/page-3.jpg', 'portfolio/latilia/page-4.jpg', 'portfolio/latilia/page-5.jpg']
     },
     '4 Tech Center': {
         slug: '4-tech-center',
