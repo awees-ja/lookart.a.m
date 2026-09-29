@@ -36,7 +36,7 @@ const translations = {
         'portfolio.projects.LUMAC': 'نظام هوية متطور',
         'portfolio.projects.Neil Spa': 'تصميم فاخر وأنيق',
         'portfolio.projects.Raed Alhuthali Law Firm': 'هوية قانونية احترافية',
-        'portfolio.projects.Nook Interior Studio': 'هوية ديكور معاصرة',
+        'portfolio.projects.مطبق الحارة': 'هوية بصرية متكاملة ودليل استخدام العلامة',
 
         'services.title': 'الخدمات <span class="highlight">المقدمة</span>',
         'services.subtitle': 'مجموعة شاملة من خدمات التصميم الاحترافية',
@@ -119,7 +119,7 @@ const translations = {
             'LUMAC': 'LUMAC Project - Comprehensive Design',
             'Neil Spa': 'Neil Spa - Luxury Visual Identity',
             'Raed Alhuthali Law Firm': 'Raed Alhuthali Law Office - Professional Identity',
-            'Nook Interior Studio': 'Nook Interior - Interior Design Studio'
+            'مطبق الحارة': 'Mutabbaq Al-Hara - Complete Brand Identity'
         },
         'services.title': 'Services <span class="highlight">Offered</span>',
         'services.subtitle': 'Comprehensive range of professional design services',
@@ -201,7 +201,7 @@ const translations = {
             'LUMAC': 'LUMAC Projesi - Kapsamlı Tasarım',
             'Neil Spa': 'Neil Spa - Lüks Görsel Kimlik',
             'Raed Alhuthali Law Firm': 'Raed Alhuthali Hukuk Ofisi - Profesyonel Kimlik',
-            'Nook Interior Studio': 'Nook Interior - İç Tasarım Stüdyosu'
+            'مطبق الحارة': 'Mutabbaq Al-Hara - Komple Marka Kimliği'
         },
         'services.title': 'Sunulan <span class="highlight">Hizmetler</span>',
         'services.subtitle': 'Kapsamlı profesyonel tasarım hizmetleri',
@@ -258,7 +258,13 @@ const translations = {
 
 // Translation function
 function t(key, lang = currentLanguage) {
-    return translations[lang][key] || key;
+    const dict = translations[lang];
+    if (dict[key] !== undefined) return dict[key];
+    const prefix = 'portfolio.projects.';
+    if (key.indexOf(prefix) === 0 && dict['portfolio.projects'] && typeof dict['portfolio.projects'] === 'object') {
+        return dict['portfolio.projects'][key.slice(prefix.length)] || key;
+    }
+    return key;
 }
 
 // Update language and page
