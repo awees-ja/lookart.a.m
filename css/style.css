@@ -1176,3 +1176,37 @@ html[dir="rtl"] .timeline-content { border-right-color: var(--primary-light); }
 .social-link { background: #241046; color: #fff; }
 .footer { background: #040209; color: var(--muted); border-top: 1px solid var(--border-color); }
 @media (max-width: 768px) { .nav-links { background: var(--bg-base); } }
+
+/* ===== Professional SVG Icons ===== */
+.ico { width: 1em; height: 1em; display: block; }
+.service-icon, .info-icon {
+    width: 64px; height: 64px; margin: 0 auto 20px; border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 30px; color: #fff;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    box-shadow: 0 8px 20px rgba(113, 56, 182, 0.35);
+}
+.info-icon { width: 48px; height: 48px; margin: 0 0 14px; font-size: 22px; border-radius: 12px; }
+html[dir="rtl"] .info-icon { margin: 0 0 14px 0; }
+.feature-icon {
+    width: 44px; height: 44px; border-radius: 12px; font-size: 22px; color: var(--primary-light);
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(163, 106, 224, 0.14); border: 1px solid var(--border-color);
+}
+.service-card.coming-soon .service-icon { filter: grayscale(.4); }
+.social-links { flex-wrap: wrap; }
+.social-link { width: 44px; height: 44px; color: #fff; font-size: 20px; }
+.social-link .ico { width: 20px; height: 20px; }
+.social-link:hover { color: #fff; }
+.social-link[data-brand="instagram"]:hover { background: linear-gradient(45deg,#F58529,#DD2A7B,#8134AF); border-color: transparent; }
+.social-link[data-brand="behance"]:hover { background: #1769FF; border-color: transparent; }
+.social-link[data-brand="tiktok"]:hover { background: #000; border-color: #fff; }
+.social-link[data-brand="facebook"]:hover { background: #1877F2; border-color: transparent; }
+.social-link[data-brand="whatsapp"]:hover { background: #25D366; border-color: transparent; }
+.whatsapp-floating { background: #25D366; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45); }
+.whatsapp-floating:hover { background: #1EBE5A; box-shadow: 0 6px 24px rgba(37, 211, 102, 0.55); }
+.whatsapp-icon { width: 26px; height: 26px; font-size: 26px; display: flex; color: #fff; }
+.whatsapp-floating { width: auto; height: auto; padding: 12px 22px; border-radius: 40px; gap: 10px; color: #fff; }
+@media (max-width: 768px) { .whatsapp-floating { width: auto; height: auto; padding: 10px 16px; } }
+.cta-btn.primary.whatsapp-floating { background: #25D366; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45); }
+.cta-btn.primary.whatsapp-floating:hover { background: #1EBE5A; box-shadow: 0 6px 24px rgba(37, 211, 102, 0.55); }
