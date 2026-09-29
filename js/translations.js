@@ -1,4 +1,7 @@
-// Multi-language translations
+// Current language (default: Arabic)
+let currentLanguage = localStorage.getItem('language') || 'ar';
+
+// Complete translations for all languages
 const translations = {
     ar: {
         'nav.about': 'عن الاستوديو',
@@ -6,13 +9,16 @@ const translations = {
         'nav.services': 'الخدمات',
         'nav.process': 'مراحل العمل',
         'nav.contact': 'تواصل معي',
+
         'hero.title': 'هويتك ليست مجرد شعار،<br><span class="highlight">بل الانطباع الذي يبقى</span>',
         'hero.subtitle': 'استوديو متخصص في تصميم الشعارات والهويات البصرية الاحترافية. أحول أفكارك إلى هويات قوية وجذابة تترك أثراً دائماً',
         'hero.whatsapp': 'تواصل عبر واتساب',
         'hero.request': 'اطلب عرض سعر',
+
         'stats.projects': 'مشروع',
         'stats.experience': 'سنوات خبرة',
         'stats.countries': 'دول',
+
         'about.title': 'عن <span class="highlight">Look Art</span>',
         'about.text1': 'أنا أويس الجرود، مصمم جرافيك متخصص في الشعارات والهويات البصرية. بدأت رحلتي في التصميم منذ أكثر من 9 سنوات، وطورت خبرة عميقة في فهم احتياجات العلامات التجارية وترجمتها إلى تصاميم احترافية وفريدة.',
         'about.text2': 'أعتقد أن كل علامة تجارية لها قصة خاصة، وعملي يكمن في إيجاد الطريقة الصحيحة لسرد تلك القصة بصرياً. من خلال 150+ مشروع ناجح في 9 دول مختلفة، اكتسبت خبرة متنوعة في التعامل مع أنواع مختلفة من المشاريع والعملاء.',
@@ -20,17 +26,18 @@ const translations = {
         'about.feature2': 'تسليم سريع وجودة عالية',
         'about.feature3': 'تواصل احترافي وشفاف',
         'about.feature4': 'خبرة عالمية ومتنوعة',
+
         'portfolio.title': 'أبرز <span class="highlight">أعمالي</span>',
         'portfolio.subtitle': 'مجموعة مختارة من المشاريع التي أفتخر بها',
-        'portfolio.projects': {
-            'Latilia': 'مشروع Latilia - تصميم هوية بصرية احترافية',
-            '4 Tech Center': 'مركز 4 التقنية - هوية بصرية عصرية',
-            'Bodo Coffeehouse': 'مقهى Bodo - تصميم هوية فاخر',
-            'LUMAC': 'مشروع LUMAC - تصميم متكامل',
-            'Neil Spa': 'Neil Spa - هوية بصرية فاخرة',
-            'Raed Alhuthali Law Firm': 'مكتب Raed Alhuthali القانوني - هوية احترافية',
-            'Nook Interior Studio': 'Nook Interior - استوديو التصميم الداخلي'
-        },
+        'portfolio.view': 'عرض المشروع',
+        'portfolio.projects.Latilia': 'تصميم شامل للهوية البصرية والشعار',
+        'portfolio.projects.4 Tech Center': 'هوية بصرية حديثة وجريئة',
+        'portfolio.projects.Bodo Coffeehouse': 'تصميم متكامل للمقهى الراقي',
+        'portfolio.projects.LUMAC': 'نظام هوية متطور',
+        'portfolio.projects.Neil Spa': 'تصميم فاخر وأنيق',
+        'portfolio.projects.Raed Alhuthali Law Firm': 'هوية قانونية احترافية',
+        'portfolio.projects.Nook Interior Studio': 'هوية ديكور معاصرة',
+
         'services.title': 'الخدمات <span class="highlight">المقدمة</span>',
         'services.subtitle': 'مجموعة شاملة من خدمات التصميم الاحترافية',
         'services.s1.title': 'تصميم الشعارات',
@@ -45,6 +52,7 @@ const translations = {
         'services.s5.desc': 'تصاميم احترافية للمطبوعات والعبوات',
         'services.s6.title': 'الموشن جرافيك',
         'services.s6.desc': 'قريباً - خدمة متقدمة من الموشن جرافيك المتخصصة',
+
         'process.title': 'مراحل <span class="highlight">العمل</span>',
         'process.subtitle': 'عملية احترافية وشفافة من البداية للنهاية',
         'process.step1.title': 'التشاور الأولي',
@@ -250,22 +258,8 @@ const translations = {
 
 // Translation function
 function t(key, lang = currentLanguage) {
-    const keys = key.split('.');
-    let value = translations[lang];
-
-    for (let k of keys) {
-        if (value && typeof value === 'object') {
-            value = value[k];
-        } else {
-            return key; // Return key if translation not found
-        }
-    }
-
-    return value || key;
+    return translations[lang][key] || key;
 }
-
-// Current language
-let currentLanguage = localStorage.getItem('language') || 'ar';
 
 // Update language and page
 function setLanguage(lang) {
