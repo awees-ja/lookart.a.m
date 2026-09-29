@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://awees-ja.github.io/lookart.a.m/sitemap.xml
