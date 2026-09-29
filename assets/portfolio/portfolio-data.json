@@ -1,0 +1,79 @@
+{
+  "Latilia": {
+    "slug": "latilia",
+    "images": [
+      "portfolio/latilia/page-1.jpg",
+      "portfolio/latilia/page-2.jpg",
+      "portfolio/latilia/page-3.jpg",
+      "portfolio/latilia/page-4.jpg",
+      "portfolio/latilia/page-5.jpg"
+    ],
+    "pages_extracted": 5
+  },
+  "4 Tech Center": {
+    "slug": "4-tech-center",
+    "images": [
+      "portfolio/4-tech-center/page-1.jpg",
+      "portfolio/4-tech-center/page-2.jpg",
+      "portfolio/4-tech-center/page-3.jpg",
+      "portfolio/4-tech-center/page-4.jpg",
+      "portfolio/4-tech-center/page-5.jpg"
+    ],
+    "pages_extracted": 5
+  },
+  "Bodo Coffeehouse": {
+    "slug": "bodo-coffeehouse",
+    "images": [
+      "portfolio/bodo-coffeehouse/page-1.jpg",
+      "portfolio/bodo-coffeehouse/page-2.jpg",
+      "portfolio/bodo-coffeehouse/page-3.jpg",
+      "portfolio/bodo-coffeehouse/page-4.jpg",
+      "portfolio/bodo-coffeehouse/page-5.jpg"
+    ],
+    "pages_extracted": 5
+  },
+  "LUMAC": {
+    "slug": "lumac",
+    "images": [
+      "portfolio/lumac/page-1.jpg",
+      "portfolio/lumac/page-2.jpg",
+      "portfolio/lumac/page-3.jpg",
+      "portfolio/lumac/page-4.jpg",
+      "portfolio/lumac/page-5.jpg"
+    ],
+    "pages_extracted": 5
+  },
+  "Neil Spa": {
+    "slug": "neil-spa",
+    "images": [
+      "portfolio/neil-spa/page-1.jpg",
+      "portfolio/neil-spa/page-2.jpg",
+      "portfolio/neil-spa/page-3.jpg",
+      "portfolio/neil-spa/page-4.jpg",
+      "portfolio/neil-spa/page-5.jpg"
+    ],
+    "pages_extracted": 5
+  },
+  "Raed Alhuthali Law Firm": {
+    "slug": "raed-alhuthali-law-firm",
+    "images": [
+      "portfolio/raed-alhuthali-law-firm/page-1.jpg",
+      "portfolio/raed-alhuthali-law-firm/page-2.jpg",
+      "portfolio/raed-alhuthali-law-firm/page-3.jpg",
+      "portfolio/raed-alhuthali-law-firm/page-4.jpg",
+      "portfolio/raed-alhuthali-law-firm/page-5.jpg"
+    ],
+    "pages_extracted": 5
+  },
+  "Nook Interior Studio": {
+    "slug": "nook-interior-studio",
+    "images": [
+      "portfolio/nook-interior-studio/page-1.jpg",
+      "portfolio/nook-interior-studio/page-2.jpg",
+      "portfolio/nook-interior-studio/page-3.jpg",
+      "portfolio/nook-interior-studio/page-4.jpg",
+      "portfolio/nook-interior-studio/page-5.jpg"
+    ],
+    "pages_extracted": 5
+  }
+}
