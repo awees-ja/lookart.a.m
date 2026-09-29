@@ -1123,46 +1123,56 @@ select:focus {
     }
 }
 
-/* Dark mode support (optional) */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #1A1A1A;
-        color: #E0E0E0;
-    }
-
-    .navbar {
-        background: rgba(20, 20, 20, 0.98);
-        border-bottom-color: #333333;
-    }
-
-    .nav-link {
-        color: #E0E0E0;
-    }
-
-    .hero {
-        background: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%);
-    }
-
-    .section-title,
-    .hero-title {
-        color: #FFFFFF;
-    }
-
-    .portfolio-item,
-    .service-card,
-    .info-card,
-    .timeline-content,
-    .modal-content {
-        background: #2D2D2D;
-        border-color: #444444;
-        color: #E0E0E0;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        background: #2D2D2D;
-        border-color: #444444;
-        color: #E0E0E0;
-    }
+/* ===== Unified Dark Purple Theme ===== */
+:root {
+    --text-dark: #F4EEFC;
+    --bg-light: #150827;
+    --border-color: rgba(163, 106, 224, 0.22);
+    --bg-base: #07030F;
+    --bg-alt: #0E0520;
+    --surface: #1A0A33;
+    --muted: #B8A9CF;
 }
+body { background-color: var(--bg-base); color: var(--text-dark); }
+.language-switcher { background: rgba(26, 10, 51, 0.92); border: 1px solid var(--border-color); box-shadow: 0 4px 15px rgba(0,0,0,.4); }
+.lang-btn { color: var(--muted); }
+.lang-btn.active, .lang-btn:hover { color: #fff; }
+.navbar { background: rgba(7, 3, 15, 0.92); border-bottom: 1px solid var(--border-color); box-shadow: none; }
+.nav-link { color: var(--muted); }
+.nav-link:hover { color: #fff; }
+.nav-btn { background: linear-gradient(135deg, var(--primary-color), var(--primary-light)); color: #fff; }
+.menu-toggle span { background: #fff; }
+.cta-btn.secondary { color: var(--primary-light); border-color: var(--primary-light); }
+.cta-btn.secondary:hover { background: rgba(163,106,224,.15); }
+.hero { background: radial-gradient(ellipse at top, #2A0F55 0%, var(--bg-base) 70%); }
+.hero::before { background: radial-gradient(circle, rgba(163,106,224,.25) 0%, transparent 70%); }
+.hero-title, .section-title { color: #fff; }
+.hero-subtitle, .section-subtitle, .stat-label, .about-content p,
+.portfolio-info p, .service-card p, .timeline-content p, .info-text { color: var(--muted); }
+.stat-number { color: var(--primary-light); }
+.about, .services, .contact { background: var(--bg-base); }
+.portfolio, .process { background: var(--bg-alt); }
+.feature { background: var(--surface); border: 1px solid var(--border-color); }
+.feature:hover { background: #241046; }
+.feature-text { color: var(--text-dark); }
+.portfolio-item { background: var(--surface); border: 1px solid var(--border-color); box-shadow: 0 4px 15px rgba(0,0,0,.4); }
+.portfolio-item:hover { box-shadow: 0 10px 30px rgba(113,56,182,.35); border-color: var(--primary-light); }
+.portfolio-image { background: linear-gradient(135deg, #2A0F55, #150827); }
+.portfolio-info h3 { color: #fff; }
+.service-card { background: var(--surface); }
+.service-card:hover { background: #241046; box-shadow: 0 10px 30px rgba(113,56,182,.3); }
+.service-card.coming-soon { background: var(--surface); }
+.service-card h3, .timeline-content h3, .info-card h4 { color: #fff; }
+.timeline-content { background: var(--surface); border-left-color: var(--primary-light); }
+html[dir="rtl"] .timeline-content { border-right-color: var(--primary-light); }
+.modal-content { background: var(--surface); border: 1px solid var(--border-color); }
+.modal-content h2, .modal-close { color: #fff; }
+.form-group input, .form-group select, .form-group textarea { background: var(--surface); color: var(--text-dark); border-color: var(--border-color); }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { background: #241046; }
+.form-group label { background: var(--bg-base); color: var(--primary-light); }
+.info-card { background: var(--surface); }
+.info-link { color: var(--primary-light); }
+.social-card { background: var(--surface); }
+.social-link { background: #241046; color: #fff; }
+.footer { background: #040209; color: var(--muted); border-top: 1px solid var(--border-color); }
+@media (max-width: 768px) { .nav-links { background: var(--bg-base); } }
