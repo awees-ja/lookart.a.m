@@ -24,7 +24,7 @@ const portfolioData = {
         slug: 'raed-alhuthali-law-firm',
         images: ['/yourusername.github.io/assets/portfolio/raed-alhuthali-law-firm/page-1.jpg', '/yourusername.github.io/assets/portfolio/raed-alhuthali-law-firm/page-2.jpg', '/yourusername.github.io/assets/portfolio/raed-alhuthali-law-firm/page-3.jpg', '/yourusername.github.io/assets/portfolio/raed-alhuthali-law-firm/page-4.jpg', '/yourusername.github.io/assets/portfolio/raed-alhuthali-law-firm/page-5.jpg']
     },
-    'Nook Interior Studio': {
+    'مطبق الحارة': {
         slug: 'nook-interior-studio',
         images: ['/yourusername.github.io/assets/portfolio/nook-interior-studio/page-1.jpg', '/yourusername.github.io/assets/portfolio/nook-interior-studio/page-2.jpg', '/yourusername.github.io/assets/portfolio/nook-interior-studio/page-3.jpg', '/yourusername.github.io/assets/portfolio/nook-interior-studio/page-4.jpg', '/yourusername.github.io/assets/portfolio/nook-interior-studio/page-5.jpg']
     }
@@ -48,7 +48,7 @@ function generatePortfolio(lang = currentLanguage) {
             <div class="portfolio-image">
                 <img src="${firstImage}" alt="${projectName}" loading="lazy">
                 <div class="portfolio-overlay">
-                    <span class="view-project" data-i18n="portfolio.view">عرض المشروع</span>
+                    <span class="view-project" data-i18n="portfolio.view">${t('portfolio.view', lang)}</span>
                 </div>
             </div>
             <div class="portfolio-info">
