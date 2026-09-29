@@ -1,69 +1,107 @@
-// Portfolio data with extracted images
+// Portfolio data
+// Image paths follow <base href> in index.html, so renaming the repo only needs that one tag changed.
+const PORTFOLIO_BASE = new URL('assets/portfolio/', document.baseURI).pathname;
+const pageImgs = (slug, count) => Array.from({ length: count }, (_, i) => `${PORTFOLIO_BASE}${slug}/page-${i + 1}.jpg`);
+const coverOf = (slug) => `${PORTFOLIO_BASE}${slug}/cover.jpg`;
+
+// categories: identity | logo | packaging | print
 const portfolioData = {
-    'Latilia': {
-        slug: 'latilia',
-        images: ['/yourusername.github.io/assets/portfolio/latilia/page-1.jpg', '/yourusername.github.io/assets/portfolio/latilia/page-2.jpg', '/yourusername.github.io/assets/portfolio/latilia/page-3.jpg', '/yourusername.github.io/assets/portfolio/latilia/page-4.jpg', '/yourusername.github.io/assets/portfolio/latilia/page-5.jpg']
-    },
-    '4 Tech Center': {
-        slug: '4-tech-center',
-        images: ['/yourusername.github.io/assets/portfolio/4-tech-center/page-1.jpg', '/yourusername.github.io/assets/portfolio/4-tech-center/page-2.jpg', '/yourusername.github.io/assets/portfolio/4-tech-center/page-3.jpg', '/yourusername.github.io/assets/portfolio/4-tech-center/page-4.jpg', '/yourusername.github.io/assets/portfolio/4-tech-center/page-5.jpg']
-    },
-    'Bodo Coffeehouse': {
-        slug: 'bodo-coffeehouse',
-        images: ['/yourusername.github.io/assets/portfolio/bodo-coffeehouse/page-1.jpg', '/yourusername.github.io/assets/portfolio/bodo-coffeehouse/page-2.jpg', '/yourusername.github.io/assets/portfolio/bodo-coffeehouse/page-3.jpg', '/yourusername.github.io/assets/portfolio/bodo-coffeehouse/page-4.jpg', '/yourusername.github.io/assets/portfolio/bodo-coffeehouse/page-5.jpg']
-    },
-    'LUMAC': {
-        slug: 'lumac',
-        images: ['/yourusername.github.io/assets/portfolio/lumac/page-1.jpg', '/yourusername.github.io/assets/portfolio/lumac/page-2.jpg', '/yourusername.github.io/assets/portfolio/lumac/page-3.jpg', '/yourusername.github.io/assets/portfolio/lumac/page-4.jpg', '/yourusername.github.io/assets/portfolio/lumac/page-5.jpg']
-    },
-    'Neil Spa': {
-        slug: 'neil-spa',
-        images: ['/yourusername.github.io/assets/portfolio/neil-spa/page-1.jpg', '/yourusername.github.io/assets/portfolio/neil-spa/page-2.jpg', '/yourusername.github.io/assets/portfolio/neil-spa/page-3.jpg', '/yourusername.github.io/assets/portfolio/neil-spa/page-4.jpg', '/yourusername.github.io/assets/portfolio/neil-spa/page-5.jpg']
-    },
-    'Raed Alhuthali Law Firm': {
-        slug: 'raed-alhuthali-law-firm',
-        images: ['/yourusername.github.io/assets/portfolio/raed-alhuthali-law-firm/page-1.jpg', '/yourusername.github.io/assets/portfolio/raed-alhuthali-law-firm/page-2.jpg', '/yourusername.github.io/assets/portfolio/raed-alhuthali-law-firm/page-3.jpg', '/yourusername.github.io/assets/portfolio/raed-alhuthali-law-firm/page-4.jpg', '/yourusername.github.io/assets/portfolio/raed-alhuthali-law-firm/page-5.jpg']
-    },
-    'مطبق الحارة': {
-        slug: 'nook-interior-studio',
-        images: ['/yourusername.github.io/assets/portfolio/nook-interior-studio/page-1.jpg', '/yourusername.github.io/assets/portfolio/nook-interior-studio/page-2.jpg', '/yourusername.github.io/assets/portfolio/nook-interior-studio/page-3.jpg', '/yourusername.github.io/assets/portfolio/nook-interior-studio/page-4.jpg', '/yourusername.github.io/assets/portfolio/nook-interior-studio/page-5.jpg']
-    }
+    'Touch Hair & Nail Spa': { slug: 'touch-spa', categories: ['identity', 'print', 'social'], cover: coverOf('touch-spa'), images: pageImgs('touch-spa', 6) },
+    'Arabo 212': { slug: 'arabo-212', categories: ['identity', 'packaging'], cover: coverOf('arabo-212'), images: pageImgs('arabo-212', 1) },
+    'Latilia': { slug: 'latilia', categories: ['identity', 'logo'], images: pageImgs('latilia', 5) },
+    'Icewana Pop Wana': { slug: 'icewana-popwana', categories: ['packaging'], cover: coverOf('icewana-popwana'), images: pageImgs('icewana-popwana', 1) },
+    'Light Foam': { slug: 'light-foam', categories: ['identity'], cover: coverOf('light-foam'), images: pageImgs('light-foam', 10) },
+    'Bodo Coffeehouse': { slug: 'bodo-coffeehouse', categories: ['identity'], images: pageImgs('bodo-coffeehouse', 5) },
+    'أولد كاف': { slug: 'old-caf', categories: ['packaging', 'logo'], cover: coverOf('old-caf'), images: pageImgs('old-caf', 1) },
+    'Silvora': { slug: 'silvora', categories: ['identity'], cover: coverOf('silvora'), images: pageImgs('silvora', 1) },
+    'LUMAC': { slug: 'lumac', categories: ['identity'], images: pageImgs('lumac', 5) },
+    'Ajmal Malqa': { slug: 'ajmal-malqa', categories: ['identity'], cover: coverOf('ajmal-malqa'), images: pageImgs('ajmal-malqa', 1) },
+    'Neil Spa': { slug: 'neil-spa', categories: ['identity'], images: pageImgs('neil-spa', 5) },
+    'Ammar Kaddah Studio': { slug: 'ammar-kaddah', categories: ['identity'], cover: coverOf('ammar-kaddah'), images: pageImgs('ammar-kaddah', 1) },
+    '4 Tech Center': { slug: '4-tech-center', categories: ['identity'], images: pageImgs('4-tech-center', 5) },
+    'Transporte GmbH': { slug: 'transporte-gmbh', categories: ['identity'], cover: coverOf('transporte-gmbh'), images: pageImgs('transporte-gmbh', 1) },
+    'Raed Alhuthali Law Firm': { slug: 'raed-alhuthali-law-firm', categories: ['identity'], images: pageImgs('raed-alhuthali-law-firm', 5) },
+    'مطبق الحارة': { slug: 'nook-interior-studio', categories: ['identity'], images: pageImgs('nook-interior-studio', 5) },
+    'OMRA': { slug: 'omra', categories: ['logo'], cover: coverOf('omra'), images: pageImgs('omra', 1) },
+    'Molto': { slug: 'molto', categories: ['packaging', 'logo'], cover: coverOf('molto'), images: pageImgs('molto', 1) },
+    'المحامي نواف العصيمي': { slug: 'nawaf-alosaimi-lawyer', categories: ['identity', 'print'], cover: coverOf('nawaf-alosaimi-lawyer'), images: pageImgs('nawaf-alosaimi-lawyer', 6) },
+    'HQ Motor Service': { slug: 'hq-motor-service', categories: ['social'], cover: coverOf('hq-motor-service'), images: pageImgs('hq-motor-service', 5) },
+    'دوشيش': { slug: 'doushesh', categories: ['logo', 'print'], cover: coverOf('doushesh'), images: pageImgs('doushesh', 1) },
+    'Firas A.M. Agha': { slug: 'firas-agha-brochure', categories: ['print'], cover: coverOf('firas-agha-brochure'), images: pageImgs('firas-agha-brochure', 1) }
 };
+
+const PORTFOLIO_FILTERS = ['all', 'identity', 'logo', 'packaging', 'print', 'social'];
+let portfolioFilter = 'all';
+
+function escapeHTML(s) {
+    return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+// Filter buttons
+function renderPortfolioFilters(lang) {
+    const box = document.getElementById('portfolioFilters');
+    if (!box) return;
+    box.innerHTML = '';
+    PORTFOLIO_FILTERS.forEach(f => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'filter-btn' + (f === portfolioFilter ? ' active' : '');
+        btn.textContent = t(`portfolio.filter.${f}`, lang);
+        btn.addEventListener('click', () => {
+            portfolioFilter = f;
+            generatePortfolio(lang);
+        });
+        box.appendChild(btn);
+    });
+}
 
 // Generate portfolio grid
 function generatePortfolio(lang = currentLanguage) {
     const grid = document.getElementById('portfolioGrid');
     if (!grid) return;
 
+    renderPortfolioFilters(lang);
     grid.innerHTML = '';
 
     Object.entries(portfolioData).forEach(([projectName, data]) => {
+        if (portfolioFilter !== 'all' && !data.categories.includes(portfolioFilter)) return;
+
         const item = document.createElement('div');
         item.className = 'portfolio-item';
 
         const projectTitle = t(`portfolio.projects.${projectName}`, lang);
-        const firstImage = data.images[0] || 'assets/images/placeholder.jpg';
+        const cover = data.cover || data.images[0];
+        const tags = data.categories.map(c => `<span class="portfolio-tag">${escapeHTML(t(`portfolio.filter.${c}`, lang))}</span>`).join('');
 
         item.innerHTML = `
             <div class="portfolio-image">
-                <img src="${firstImage}" alt="${projectName}" loading="lazy">
+                <img src="${cover}" alt="${escapeHTML(projectName)}" loading="lazy">
                 <div class="portfolio-overlay">
-                    <span class="view-project" data-i18n="portfolio.view">${t('portfolio.view', lang)}</span>
+                    <span class="view-project">${escapeHTML(t('portfolio.view', lang))}</span>
                 </div>
             </div>
             <div class="portfolio-info">
-                <h3>${projectName}</h3>
-                <p>${projectTitle}</p>
+                <div class="portfolio-tags">${tags}</div>
+                <h3>${escapeHTML(projectName)}</h3>
+                <p>${escapeHTML(projectTitle)}</p>
             </div>
         `;
 
-        // Click to view project details
-        item.addEventListener('click', () => {
-            showProjectDetails(projectName, data, lang);
-        });
-
+        item.addEventListener('click', () => showProjectDetails(projectName, data, lang));
         grid.appendChild(item);
     });
+}
+
+// Full-size image viewer
+function openLightbox(src, alt) {
+    const box = document.createElement('div');
+    box.className = 'lightbox';
+    box.innerHTML = `<img src="${src}" alt="${escapeHTML(alt)}">`;
+    const close = () => { box.remove(); document.removeEventListener('keydown', onKey); };
+    const onKey = (e) => { if (e.key === 'Escape') close(); };
+    box.addEventListener('click', close);
+    document.addEventListener('keydown', onKey);
+    document.body.appendChild(box);
 }
 
 // Show project details modal
@@ -71,19 +109,19 @@ function showProjectDetails(projectName, data, lang = currentLanguage) {
     const modal = document.createElement('div');
     modal.className = 'project-modal';
 
-    const closeBtn = `<button class="modal-close">&times;</button>`;
-    const imagesHTML = data.images.map(img => `<img src="${img}" alt="${projectName}" loading="lazy">`).join('');
+    const imagesHTML = data.images.map(img => `<img src="${img}" alt="${escapeHTML(projectName)}" loading="lazy">`).join('');
+    const waText = encodeURIComponent(t('portfolio.waMessage', lang).replace('{name}', projectName));
 
     modal.innerHTML = `
         <div class="modal-content">
-            ${closeBtn}
-            <h2>${projectName}</h2>
-            <div class="project-gallery">
+            <button class="modal-close" aria-label="Close">&times;</button>
+            <h2>${escapeHTML(projectName)}</h2>
+            <div class="project-gallery${data.images.length === 1 ? ' single' : ''}">
                 ${imagesHTML}
             </div>
             <div class="project-actions">
-                <a href="https://wa.me/905312866822?text=مرحباً، أود الاستفسار عن مشروع ${projectName}" class="cta-btn primary" target="_blank">
-                    تواصل عن هذا المشروع
+                <a href="https://wa.me/905312866822?text=${waText}" class="cta-btn primary" target="_blank" rel="noopener">
+                    ${escapeHTML(t('portfolio.contactProject', lang))}
                 </a>
             </div>
         </div>
@@ -92,15 +130,14 @@ function showProjectDetails(projectName, data, lang = currentLanguage) {
     document.body.appendChild(modal);
     modal.style.display = 'flex';
 
-    // Close modal
-    modal.querySelector('.modal-close').addEventListener('click', () => {
-        modal.remove();
-    });
+    const close = () => { modal.remove(); document.removeEventListener('keydown', onKey); };
+    const onKey = (e) => { if (e.key === 'Escape' && !document.querySelector('.lightbox')) close(); };
+    document.addEventListener('keydown', onKey);
 
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.remove();
-        }
+    modal.querySelector('.modal-close').addEventListener('click', close);
+    modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+    modal.querySelectorAll('.project-gallery img').forEach(img => {
+        img.addEventListener('click', () => openLightbox(img.src, projectName));
     });
 }
 

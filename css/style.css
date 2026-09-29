@@ -1210,3 +1210,24 @@ html[dir="rtl"] .info-icon { margin: 0 0 14px 0; }
 @media (max-width: 768px) { .whatsapp-floating { width: auto; height: auto; padding: 10px 16px; } }
 .cta-btn.primary.whatsapp-floating { background: #25D366; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45); }
 .cta-btn.primary.whatsapp-floating:hover { background: #1EBE5A; box-shadow: 0 6px 24px rgba(37, 211, 102, 0.55); }
+
+/* ===== Portfolio filters, tags, gallery, lightbox ===== */
+.portfolio-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+.filter-btn {
+    padding: 8px 20px; border-radius: 30px; cursor: pointer; font-family: inherit; font-weight: 700; font-size: 14px;
+    background: transparent; color: var(--muted); border: 1px solid var(--border-color); transition: var(--transition);
+}
+.filter-btn:hover { color: #fff; border-color: var(--primary-light); }
+.filter-btn.active { color: #fff; background: linear-gradient(135deg, var(--primary-color), var(--primary-light)); border-color: transparent; }
+.portfolio-grid { margin-top: 30px; }
+.portfolio-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.portfolio-tag { font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; color: var(--primary-light); background: rgba(163,106,224,.14); border: 1px solid var(--border-color); }
+.project-gallery { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); align-items: start; }
+.project-gallery img { height: auto; object-fit: contain; background: #0E0520; cursor: zoom-in; }
+.project-gallery.single { grid-template-columns: 1fr; max-width: 520px; margin-left: auto; margin-right: auto; }
+.lightbox {
+    position: fixed; inset: 0; z-index: 3000; background: rgba(4, 2, 9, 0.94); display: flex;
+    align-items: center; justify-content: center; padding: 20px; cursor: zoom-out; overflow: auto;
+}
+.lightbox img { max-width: 100%; max-height: none; width: auto; height: auto; margin: auto; border-radius: 8px; }
+@media (min-width: 900px) { .lightbox img { max-height: 95vh; } }
