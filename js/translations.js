@@ -20,7 +20,7 @@ const translations = {
         'stats.countries': 'دول',
 
         'about.title': 'عن <span class="highlight">Look Art</span>',
-        'about.text1': 'أنا أويس الجرود، مصمم جرافيك متخصص في الشعارات والهويات البصرية. بدأت رحلتي في التصميم منذ أكثر من 9 سنوات، وطورت خبرة عميقة في فهم احتياجات العلامات التجارية وترجمتها إلى تصاميم احترافية وفريدة.',
+        'about.text1': 'أنا أويس الجرود، مصمم هويات بصرية وعلامات تجارية ومؤسس Look Art. بدأت رحلتي في التصميم منذ أكثر من 9 سنوات، وطورت خبرة عميقة في فهم احتياجات العلامات التجارية وترجمتها إلى تصاميم احترافية وفريدة.',
         'about.text2': 'أعتقد أن كل علامة تجارية لها قصة خاصة، وعملي يكمن في إيجاد الطريقة الصحيحة لسرد تلك القصة بصرياً. من خلال 150+ مشروع ناجح في 9 دول مختلفة، اكتسبت خبرة متنوعة في التعامل مع أنواع مختلفة من المشاريع والعملاء.',
         'about.feature1': 'تصاميم احترافية وفريدة',
         'about.feature2': 'تسليم سريع وجودة عالية',
@@ -103,6 +103,9 @@ const translations = {
         'form.message': 'وصف المشروع',
         'form.deadline': 'الموعد المتوقع',
         'form.submit': 'إرسال الطلب',
+        'form.err.required': 'الرجاء ملء جميع الحقول المطلوبة',
+        'form.err.email': 'الرجاء إدخال بريد إلكتروني صحيح',
+        'form.redirect': 'يتم تحويلك إلى WhatsApp لإرسال الطلب...',
         'footer.tagline': 'استوديو متخصص في الشعارات والهويات البصرية الاحترافية',
         'footer.links': 'الروابط السريعة',
         'footer.about': 'عن الاستوديو',
@@ -111,7 +114,7 @@ const translations = {
         'footer.contact': 'التواصل',
         'footer.info': 'معلومات التواصل',
         'footer.location': '📍 إسطنبول، تركيا',
-        'footer.copyright': '&copy; 2024 Look Art - جميع الحقوق محفوظة | تصميم واحترافية في كل بكسل'
+        'footer.copyright': '&copy; 2026 Look Art - جميع الحقوق محفوظة | تصميم واحترافية في كل بكسل'
     },
     en: {
         'nav.about': 'About',
@@ -127,7 +130,7 @@ const translations = {
         'stats.experience': 'Years Experience',
         'stats.countries': 'Countries',
         'about.title': 'About <span class="highlight">Look Art</span>',
-        'about.text1': 'I\'m Awees Aljaroud, a graphic designer specializing in logos and visual identities. I started my design journey over 9 years ago and have developed deep expertise in understanding brand needs and translating them into professional and unique designs.',
+        'about.text1': 'I\'m Awees Aljaroud, a brand identity designer and the founder of Look Art. I started my design journey over 9 years ago and have developed deep expertise in understanding brand needs and translating them into professional and unique designs.',
         'about.text2': 'I believe every brand has its own story, and my work is to find the right way to tell that story visually. Through 150+ successful projects in 9 different countries, I\'ve gained diverse experience in handling various types of projects and clients.',
         'about.feature1': 'Professional & Unique Designs',
         'about.feature2': 'Fast Delivery & High Quality',
@@ -209,6 +212,9 @@ const translations = {
         'form.message': 'Project Description',
         'form.deadline': 'Expected Deadline',
         'form.submit': 'Send Request',
+        'form.err.required': 'Please fill in all required fields',
+        'form.err.email': 'Please enter a valid email address',
+        'form.redirect': 'Redirecting you to WhatsApp to send your request...',
         'footer.tagline': 'A specialized studio in professional logos and visual identity design',
         'footer.links': 'Quick Links',
         'footer.about': 'About',
@@ -217,7 +223,7 @@ const translations = {
         'footer.contact': 'Contact',
         'footer.info': 'Contact Information',
         'footer.location': '📍 Istanbul, Turkey',
-        'footer.copyright': '&copy; 2024 Look Art - All Rights Reserved | Professional Design in Every Pixel'
+        'footer.copyright': '&copy; 2026 Look Art - All Rights Reserved | Professional Design in Every Pixel'
     },
     tr: {
         'nav.about': 'Hakkında',
@@ -233,7 +239,7 @@ const translations = {
         'stats.experience': 'Yıl Deneyim',
         'stats.countries': 'Ülke',
         'about.title': '<span class="highlight">Look Art</span> Hakkında',
-        'about.text1': 'Ben Awees Aljaroud, logo ve görsel kimlik tasarımında uzmanlaşmış bir grafik tasarımcı. 9 yıldan fazla bir süre önce tasarım yolculuğuma başladım ve marka ihtiyaçlarını anlama ve bunları profesyonel ve benzersiz tasarımlara dönüştürme konusunda derin bir uzmanlık geliştirdim.',
+        'about.text1': 'Ben Awees Aljaroud, marka kimliği tasarımcısı ve Look Art\'ın kurucusuyum. 9 yıldan fazla bir süre önce tasarım yolculuğuma başladım ve marka ihtiyaçlarını anlama ve bunları profesyonel ve benzersiz tasarımlara dönüştürme konusunda derin bir uzmanlık geliştirdim.',
         'about.text2': 'Her markanın kendi hikayesi olduğuna inanıyorum ve benim çalışmam bu hikayeyi görsel olarak anlatmanın doğru yolunu bulmaktır. 9 farklı ülkede 150+ başarılı proje aracılığıyla, çeşitli proje ve müşteri türleriyle uğraşma konusunda çeşitli deneyim kazandım.',
         'about.feature1': 'Profesyonel ve Benzersiz Tasarımlar',
         'about.feature2': 'Hızlı Teslimat ve Yüksek Kalite',
@@ -315,6 +321,9 @@ const translations = {
         'form.message': 'Proje Açıklaması',
         'form.deadline': 'Beklenen Son Tarih',
         'form.submit': 'İsteği Gönder',
+        'form.err.required': 'Lütfen tüm zorunlu alanları doldurun',
+        'form.err.email': 'Lütfen geçerli bir e-posta adresi girin',
+        'form.redirect': 'Talebinizi göndermek için WhatsApp\'a yönlendiriliyorsunuz...',
         'footer.tagline': 'Logo ve görsel kimlik tasarımında uzmanlaşmış bir stüdyo',
         'footer.links': 'Hızlı Bağlantılar',
         'footer.about': 'Hakkında',
@@ -323,7 +332,7 @@ const translations = {
         'footer.contact': 'İletişim',
         'footer.info': 'İletişim Bilgileri',
         'footer.location': '📍 İstanbul, Türkiye',
-        'footer.copyright': '&copy; 2024 Look Art - Tüm Hakları Saklıdır | Her Pikselde Profesyonel Tasarım'
+        'footer.copyright': '&copy; 2026 Look Art - Tüm Hakları Saklıdır | Her Pikselde Profesyonel Tasarım'
     }
 };
 

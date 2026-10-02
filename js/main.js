@@ -6,28 +6,28 @@ const coverOf = (slug) => `${PORTFOLIO_BASE}${slug}/cover.jpg`;
 
 // categories: identity | logo | packaging | print
 const portfolioData = {
-    'Touch Hair & Nail Spa': { slug: 'touch-spa', categories: ['identity', 'print', 'social'], cover: coverOf('touch-spa'), images: pageImgs('touch-spa', 6) },
-    'Arabo 212': { slug: 'arabo-212', categories: ['identity', 'packaging'], cover: coverOf('arabo-212'), images: pageImgs('arabo-212', 1) },
-    'Latilia': { slug: 'latilia', categories: ['identity', 'logo'], images: pageImgs('latilia', 5) },
-    'Icewana Pop Wana': { slug: 'icewana-popwana', categories: ['packaging'], cover: coverOf('icewana-popwana'), images: pageImgs('icewana-popwana', 1) },
-    'Light Foam': { slug: 'light-foam', categories: ['identity'], cover: coverOf('light-foam'), images: pageImgs('light-foam', 10) },
     'Bodo Coffeehouse': { slug: 'bodo-coffeehouse', categories: ['identity'], images: pageImgs('bodo-coffeehouse', 5) },
+    'مطبق الحارة': { slug: 'nook-interior-studio', categories: ['identity'], images: pageImgs('nook-interior-studio', 5) },
+    'Arabo 212': { slug: 'arabo-212', categories: ['identity', 'packaging'], cover: coverOf('arabo-212'), images: pageImgs('arabo-212', 1) },
+    'Icewana Pop Wana': { slug: 'icewana-popwana', categories: ['packaging'], cover: coverOf('icewana-popwana'), images: pageImgs('icewana-popwana', 1) },
     'أولد كاف': { slug: 'old-caf', categories: ['packaging', 'logo'], cover: coverOf('old-caf'), images: pageImgs('old-caf', 1) },
-    'Silvora': { slug: 'silvora', categories: ['identity'], cover: coverOf('silvora'), images: pageImgs('silvora', 1) },
-    'LUMAC': { slug: 'lumac', categories: ['identity'], images: pageImgs('lumac', 5) },
-    'Ajmal Malqa': { slug: 'ajmal-malqa', categories: ['identity'], cover: coverOf('ajmal-malqa'), images: pageImgs('ajmal-malqa', 1) },
+    'Molto': { slug: 'molto', categories: ['packaging', 'logo'], cover: coverOf('molto'), images: pageImgs('molto', 1) },
+    'Touch Hair & Nail Spa': { slug: 'touch-spa', categories: ['identity', 'print', 'social'], cover: coverOf('touch-spa'), images: pageImgs('touch-spa', 6) },
     'Neil Spa': { slug: 'neil-spa', categories: ['identity'], images: pageImgs('neil-spa', 5) },
+    'LUMAC': { slug: 'lumac', categories: ['identity'], images: pageImgs('lumac', 5) },
+    'Light Foam': { slug: 'light-foam', categories: ['identity'], cover: coverOf('light-foam'), images: pageImgs('light-foam', 10) },
+    'Latilia': { slug: 'latilia', categories: ['identity', 'logo'], images: pageImgs('latilia', 5) },
+    'Silvora': { slug: 'silvora', categories: ['identity'], cover: coverOf('silvora'), images: pageImgs('silvora', 1) },
+    'Ajmal Malqa': { slug: 'ajmal-malqa', categories: ['identity'], cover: coverOf('ajmal-malqa'), images: pageImgs('ajmal-malqa', 1) },
     'Ammar Kaddah Studio': { slug: 'ammar-kaddah', categories: ['identity'], cover: coverOf('ammar-kaddah'), images: pageImgs('ammar-kaddah', 1) },
     '4 Tech Center': { slug: '4-tech-center', categories: ['identity'], images: pageImgs('4-tech-center', 5) },
     'Transporte GmbH': { slug: 'transporte-gmbh', categories: ['identity'], cover: coverOf('transporte-gmbh'), images: pageImgs('transporte-gmbh', 1) },
-    'Raed Alhuthali Law Firm': { slug: 'raed-alhuthali-law-firm', categories: ['identity'], images: pageImgs('raed-alhuthali-law-firm', 5) },
-    'مطبق الحارة': { slug: 'nook-interior-studio', categories: ['identity'], images: pageImgs('nook-interior-studio', 5) },
-    'OMRA': { slug: 'omra', categories: ['logo'], cover: coverOf('omra'), images: pageImgs('omra', 1) },
-    'Molto': { slug: 'molto', categories: ['packaging', 'logo'], cover: coverOf('molto'), images: pageImgs('molto', 1) },
-    'المحامي نواف العصيمي': { slug: 'nawaf-alosaimi-lawyer', categories: ['identity', 'print'], cover: coverOf('nawaf-alosaimi-lawyer'), images: pageImgs('nawaf-alosaimi-lawyer', 6) },
     'HQ Motor Service': { slug: 'hq-motor-service', categories: ['social'], cover: coverOf('hq-motor-service'), images: pageImgs('hq-motor-service', 5) },
+    'OMRA': { slug: 'omra', categories: ['logo'], cover: coverOf('omra'), images: pageImgs('omra', 1) },
     'دوشيش': { slug: 'doushesh', categories: ['logo', 'print'], cover: coverOf('doushesh'), images: pageImgs('doushesh', 1) },
-    'Firas A.M. Agha': { slug: 'firas-agha-brochure', categories: ['print'], cover: coverOf('firas-agha-brochure'), images: pageImgs('firas-agha-brochure', 1) }
+    'Firas A.M. Agha': { slug: 'firas-agha-brochure', categories: ['print'], cover: coverOf('firas-agha-brochure'), images: pageImgs('firas-agha-brochure', 1) },
+    'Raed Alhuthali Law Firm': { slug: 'raed-alhuthali-law-firm', categories: ['identity'], images: pageImgs('raed-alhuthali-law-firm', 5) },
+    'المحامي نواف العصيمي': { slug: 'nawaf-alosaimi-lawyer', categories: ['identity', 'print'], cover: coverOf('nawaf-alosaimi-lawyer'), images: pageImgs('nawaf-alosaimi-lawyer', 6) }
 };
 
 const PORTFOLIO_FILTERS = ['all', 'identity', 'logo', 'packaging', 'print', 'social'];
@@ -237,12 +237,12 @@ if (contactForm) {
 
         // Validation
         if (!name || !email || !service || !message) {
-            showNotification('الرجاء ملء جميع الحقول المطلوبة', 'error');
+            showNotification(t('form.err.required', currentLanguage), 'error');
             return;
         }
 
         if (!isValidEmail(email)) {
-            showNotification('الرجاء إدخال بريد إلكتروني صحيح', 'error');
+            showNotification(t('form.err.email', currentLanguage), 'error');
             return;
         }
 
@@ -268,7 +268,7 @@ ${message}
         const whatsappURL = `https://wa.me/905312866822?text=${encodedMessage}`;
 
         // Show success and redirect to WhatsApp
-        showNotification('يتم تحويلك إلى WhatsApp لإرسال الطلب...', 'success');
+        showNotification(t('form.redirect', currentLanguage), 'success');
 
         setTimeout(() => {
             window.open(whatsappURL, '_blank');
