@@ -86,7 +86,7 @@ function generatePortfolio(lang = currentLanguage) {
             </div>
             <div class="portfolio-info">
                 <div class="portfolio-tags">${tags}</div>
-                <h3>${escapeHTML(projectName)}</h3>
+                <h3><bdi>${escapeHTML(projectName)}</bdi></h3>
                 <p>${escapeHTML(projectTitle)}</p>
             </div>
         `;
@@ -119,7 +119,7 @@ function showProjectDetails(projectName, data, lang = currentLanguage) {
     modal.innerHTML = `
         <div class="modal-content">
             <button class="modal-close" aria-label="Close">&times;</button>
-            <h2>${escapeHTML(projectName)}</h2>
+            <h2><bdi>${escapeHTML(projectName)}</bdi></h2>
             <div class="project-gallery${data.images.length === 1 ? ' single' : ''}">
                 ${imagesHTML}
             </div>

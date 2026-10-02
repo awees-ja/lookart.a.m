@@ -1295,3 +1295,7 @@ html[dir="rtl"] .info-icon { margin: 0 0 14px 0; }
 
 /* language switcher scrolls away with the page instead of covering section titles */
 .language-switcher { position: absolute; }
+
+/* Keep numbers/Latin names in their natural order inside RTL text */
+.info-link[dir="ltr"] { unicode-bidi: isolate; }
+.portfolio-info h3 bdi, .project-modal h2 bdi { unicode-bidi: isolate; }
