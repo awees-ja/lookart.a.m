@@ -20,6 +20,9 @@ const portfolioData = {
     'Silvora': { slug: 'silvora', categories: ['identity'], cover: coverOf('silvora'), images: pageImgs('silvora', 1) },
     'Ajmal Malqa': { slug: 'ajmal-malqa', categories: ['identity'], cover: coverOf('ajmal-malqa'), images: pageImgs('ajmal-malqa', 1) },
     'Ammar Kaddah Studio': { slug: 'ammar-kaddah', categories: ['identity'], cover: coverOf('ammar-kaddah'), images: pageImgs('ammar-kaddah', 1) },
+    // Nook Interior Studio — images not uploaded yet. Upload page-1.jpg … page-N.jpg to assets/portfolio/nook-studio/,
+    // set the count below to N and change hidden to false. (cover.jpg is optional; page-1 is used if absent.)
+    'Nook Interior Studio': { slug: 'nook-studio', hidden: true, categories: ['identity'], images: pageImgs('nook-studio', 1) },
     '4 Tech Center': { slug: '4-tech-center', categories: ['identity'], images: pageImgs('4-tech-center', 5) },
     'Transporte GmbH': { slug: 'transporte-gmbh', categories: ['identity'], cover: coverOf('transporte-gmbh'), images: pageImgs('transporte-gmbh', 1) },
     'HQ Motor Service': { slug: 'hq-motor-service', categories: ['social'], cover: coverOf('hq-motor-service'), images: pageImgs('hq-motor-service', 5) },
@@ -64,6 +67,7 @@ function generatePortfolio(lang = currentLanguage) {
     grid.innerHTML = '';
 
     Object.entries(portfolioData).forEach(([projectName, data]) => {
+        if (data.hidden) return; // set hidden:false once the project's images are uploaded
         if (portfolioFilter !== 'all' && !data.categories.includes(portfolioFilter)) return;
 
         const item = document.createElement('div');
@@ -129,6 +133,7 @@ function showProjectDetails(projectName, data, lang = currentLanguage) {
 
     document.body.appendChild(modal);
     modal.style.display = 'flex';
+    if (typeof trackEvent === 'function') trackEvent('view_project', { project_name: projectName });
 
     const close = () => { modal.remove(); document.removeEventListener('keydown', onKey); };
     const onKey = (e) => { if (e.key === 'Escape' && !document.querySelector('.lightbox')) close(); };
@@ -268,6 +273,8 @@ ${message}
         const whatsappURL = `https://wa.me/905312866822?text=${encodedMessage}`;
 
         // Show success and redirect to WhatsApp
+        if (typeof trackEvent === 'function') trackEvent('generate_lead', { lead_source: 'contact_form', service: service });
+
         showNotification(t('form.redirect', currentLanguage), 'success');
 
         setTimeout(() => {
@@ -307,7 +314,7 @@ function showNotification(message, type = 'info') {
         notification.style.background = '#FF6B6B';
         notification.style.color = 'white';
     } else {
-        notification.style.background = '#7138B6';
+        notification.style.background = '#9D4EDD';
         notification.style.color = 'white';
     }
 
