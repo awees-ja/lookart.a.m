@@ -12,6 +12,7 @@ const portfolioData = {
     'Touch Hair & Nail Spa': { slug: 'touch-spa', categories: ['identity'], cover: coverOf('touch-spa'), images: pageImgs('touch-spa', 6) },
     'ألبسة المأمون': { slug: 'almamoon-menswear', categories: ['identity'], cover: coverOf('almamoon-menswear'), images: pageImgs('almamoon-menswear', 6) },
     'Silvora': { slug: 'silvora', categories: ['identity'], cover: coverOf('silvora'), images: pageImgs('silvora', 2) },
+    'Miray Jalkama': { slug: 'miray-jalkama', categories: ['identity'], cover: coverOf('miray-jalkama'), images: pageImgs('miray-jalkama', 8) },
     'Bodo Coffeehouse': { slug: 'bodo-coffeehouse', categories: ['identity'], cover: coverOf('bodo-coffeehouse'), images: pageImgs('bodo-coffeehouse', 9) },
     'المحامي نواف العصيمي': { slug: 'nawaf-alosaimi-lawyer', categories: ['identity'], cover: coverOf('nawaf-alosaimi-lawyer'), images: pageImgs('nawaf-alosaimi-lawyer', 6) },
     'Raed Alhuthali Law Firm': { slug: 'raed-alhuthali-law-firm', categories: ['identity'], cover: coverOf('raed-alhuthali-law-firm'), images: pageImgs('raed-alhuthali-law-firm', 9) },
