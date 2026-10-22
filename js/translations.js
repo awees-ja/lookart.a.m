@@ -85,6 +85,7 @@ const translations = {
         'portfolio.projects.نادي القصور': 'تصميم إعلان افتتاح نادي القصور الرياضي',
         'portfolio.projects.Look Art — سوشال': 'تصاميم سوشال ميديا لحسابات استوديو Look Art',
         'portfolio.projects.Miray Jalkama': 'هوية بصرية ومحتوى سوشال ميديا لمركز ميراي جلقمة للدعم النفسي للأطفال في إسطنبول',
+        'portfolio.projects.دار الأرقم': 'تصميم شعار دار الأرقم بن أبي الأرقم الشرعية — منبج، تأسست 1977',
         'portfolio.projects.Firas A.M. Agha': 'ملف تعريفي مطبوع لمهندس معماري',
         'portfolio.projects.Look Art Motion': 'فيديو موشن جرافيك تعريفي لخدمات استوديو Look Art',
 
@@ -239,7 +240,8 @@ const translations = {
             'مدرسة أتاكوي': 'Social media designs for Ataköy driving school in Istanbul',
             'نادي القصور': 'Opening announcement design for Al-Qusour gym',
             'Look Art — سوشال': 'Social media designs for the Look Art studio accounts',
-            'Miray Jalkama': 'Brand identity and social media for Miray Jalkama, a child psychological support centre in Istanbul'
+            'Miray Jalkama': 'Brand identity and social media for Miray Jalkama, a child psychological support centre in Istanbul',
+            'دار الأرقم': 'Logo design for Dar Al-Arqam Islamic school — Manbij, est. 1977'
         },
         'services.title': 'Services <span class="highlight">Offered</span>',
         'services.subtitle': 'Comprehensive range of professional design services',
@@ -391,7 +393,8 @@ const translations = {
             'مدرسة أتاكوي': 'İstanbul\'daki Ataköy Sürücü Kursu için sosyal medya tasarımları',
             'نادي القصور': 'Al-Qusour spor salonu açılış duyurusu tasarımı',
             'Look Art — سوشال': 'Look Art stüdyo hesapları için sosyal medya tasarımları',
-            'Miray Jalkama': 'İstanbul\'daki çocuk psikolojik destek merkezi Miray Jalkama için marka kimliği ve sosyal medya'
+            'Miray Jalkama': 'İstanbul\'daki çocuk psikolojik destek merkezi Miray Jalkama için marka kimliği ve sosyal medya',
+            'دار الأرقم': 'Dar Al-Arqam şer\'i okulu için logo tasarımı — Menbiç, 1977'
         },
         'services.title': 'Sunulan <span class="highlight">Hizmetler</span>',
         'services.subtitle': 'Kapsamlı profesyonel tasarım hizmetleri',
