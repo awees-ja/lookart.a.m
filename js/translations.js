@@ -36,7 +36,7 @@ const translations = {
         'portfolio.filter.social': 'تصاميم السوشال ميديا',
         'portfolio.filter.motion': 'الموشن والمونتاج',
         'portfolio.projects.المحامي نواف العصيمي': 'هوية بصرية متكاملة للمحامي نواف ضاوي العصيمي: شعار وبطاقات وقرطاسية ومحتوى رقمي',
-        'portfolio.projects.HQ Motor Service': 'تصاميم سوشال ميديا للمناسبات والأعياد الأمريكية لشركة HQ Motor Service',
+        'portfolio.projects.HQ Motor Service': 'تصاميم سوشال ميديا لشركة قطع غيار المحركات HQ Motor Service: إعلانات منتجات وتوظيف ومناسبات',
         'portfolio.contactProject': 'تواصل عن هذا المشروع',
         'portfolio.waMessage': 'مرحباً، أود الاستفسار عن مشروع {name}',
         'portfolio.view': 'عرض المشروع',
@@ -81,6 +81,9 @@ const translations = {
         'portfolio.projects.Hotz': 'تصميم علبة عرض لمنتج Hotz',
         'portfolio.projects.رول أب إعلانية': 'تصميم رول أب إعلانية لمقاهٍ وشركات أدوية',
         'portfolio.projects.Space': 'تصميم ستيكرات مستوحاة من التراث السعودي لمقهى Space',
+        'portfolio.projects.مدرسة أتاكوي': 'تصاميم سوشال ميديا لمدرسة أتاكوي لتعليم القيادة في إسطنبول',
+        'portfolio.projects.نادي القصور': 'تصميم إعلان افتتاح نادي القصور الرياضي',
+        'portfolio.projects.Look Art — سوشال': 'تصاميم سوشال ميديا لحسابات استوديو Look Art',
         'portfolio.projects.Firas A.M. Agha': 'ملف تعريفي مطبوع لمهندس معماري',
         'portfolio.projects.Look Art Motion': 'فيديو موشن جرافيك تعريفي لخدمات استوديو Look Art',
 
@@ -231,7 +234,10 @@ const translations = {
             'Neil Spa — مطبوعات': 'Service menu and bags for Neil Spa',
             'Hotz': 'Display box design for Hotz',
             'رول أب إعلانية': 'Roll-up banners for cafés and a pharmaceutical brand',
-            'Space': 'Saudi-heritage sticker set for Space café'
+            'Space': 'Saudi-heritage sticker set for Space café',
+            'مدرسة أتاكوي': 'Social media designs for Ataköy driving school in Istanbul',
+            'نادي القصور': 'Opening announcement design for Al-Qusour gym',
+            'Look Art — سوشال': 'Social media designs for the Look Art studio accounts'
         },
         'services.title': 'Services <span class="highlight">Offered</span>',
         'services.subtitle': 'Comprehensive range of professional design services',
@@ -379,7 +385,10 @@ const translations = {
             'Neil Spa — مطبوعات': 'Neil Spa için hizmet menüsü ve çantalar',
             'Hotz': 'Hotz için teşhir kutusu tasarımı',
             'رول أب إعلانية': 'Kafeler ve bir ilaç markası için roll-up tasarımları',
-            'Space': 'Space kafe için Suudi mirasından ilham alan etiket seti'
+            'Space': 'Space kafe için Suudi mirasından ilham alan etiket seti',
+            'مدرسة أتاكوي': 'İstanbul\'daki Ataköy Sürücü Kursu için sosyal medya tasarımları',
+            'نادي القصور': 'Al-Qusour spor salonu açılış duyurusu tasarımı',
+            'Look Art — سوشال': 'Look Art stüdyo hesapları için sosyal medya tasarımları'
         },
         'services.title': 'Sunulan <span class="highlight">Hizmetler</span>',
         'services.subtitle': 'Kapsamlı profesyonel tasarım hizmetleri',
