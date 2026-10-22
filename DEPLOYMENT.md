@@ -26,7 +26,7 @@ look-art-website/
 │       ├── lumac/
 │       ├── neil-spa/
 │       ├── raed-alhuthali-law-firm/
-│       └── nook-interior-studio/
+│       └── mutabbaq-al-hara/
 ├── README.md              # توثيق المشروع
 └── DEPLOYMENT.md          # هذا الملف
 
