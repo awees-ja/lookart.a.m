@@ -1356,8 +1356,8 @@ html[dir="ltr"] .scroll-progress { transform-origin: left; }
 /* generic reveal */
 .rv { opacity: 0; transform: translateY(34px); transition: opacity .8s var(--ease-out), transform 1s var(--ease-out); transition-delay: var(--d, 0ms); }
 .rv.in { opacity: 1; transform: none; }
-.section-title.rv { transform: translateY(24px); clip-path: inset(0 0 100% 0); transition: opacity .8s var(--ease-out), transform 1s var(--ease-out), clip-path 1s var(--ease-out); }
-.section-title.rv.in { clip-path: inset(0 0 -20% 0); }
+.section-title.rv { transform: translateY(24px); filter: blur(6px); transition: opacity .8s var(--ease-out), transform 1s var(--ease-out), filter .8s var(--ease-out); }
+.section-title.rv.in { filter: none; }
 
 /* portfolio cards */
 .portfolio-item.rv-card { transform: translateY(40px) scale(.97); }
@@ -1410,3 +1410,24 @@ html[dir="ltr"] .scroll-progress { transform-origin: left; }
     .hero-orb, .hero .highlight { animation: none !important; }
     .rv { opacity: 1 !important; transform: none !important; clip-path: none !important; }
 }
+
+/* ===================== Learn section ===================== */
+.learn { padding: 100px 0; background: linear-gradient(180deg, transparent, rgba(123,79,251,.06), transparent); }
+.learn-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 22px; margin-top: 50px; }
+.learn-card { all: unset; cursor: pointer; display: flex; flex-direction: column; border-radius: 16px; overflow: hidden; background: var(--surface, #160a28); border: 1px solid var(--border-color, #2a1b45);
+    transition: transform .5s cubic-bezier(.16,1,.3,1), border-color .3s ease, box-shadow .4s ease, opacity .8s cubic-bezier(.16,1,.3,1) var(--d,0ms); }
+.learn-card:hover, .learn-card:focus-visible { transform: translateY(-6px); border-color: var(--primary-light, #B77CEB); box-shadow: 0 14px 34px rgba(123,79,251,.3); }
+.learn-card:focus-visible { outline: 2px solid #B77CEB; outline-offset: 3px; }
+.learn-thumb { position: relative; aspect-ratio: 9/14; overflow: hidden; background: #0b0614; }
+.learn-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; transition: transform 1s cubic-bezier(.16,1,.3,1); }
+.learn-card:hover .learn-thumb img { transform: scale(1.06); }
+.learn-play { position: absolute; inset-inline-start: 12px; bottom: 12px; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    background: rgba(123,79,251,.92); color: #fff; font-size: 14px; padding-left: 3px; box-shadow: 0 6px 18px rgba(0,0,0,.4); transition: transform .4s cubic-bezier(.16,1,.3,1); }
+.learn-card:hover .learn-play { transform: scale(1.12); }
+.learn-meta { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px 18px; }
+.learn-ep { font-size: .72rem; letter-spacing: .08em; color: var(--primary-light, #B77CEB); font-weight: 700; }
+.learn-title { color: #fff; font-weight: 700; font-size: 1rem; line-height: 1.4; }
+.learn-desc { color: var(--muted, #B8A9CF); font-size: .85rem; line-height: 1.6; }
+.learn-note { text-align: center; color: var(--muted, #B8A9CF); opacity: .7; font-size: .8rem; margin-top: 30px; }
+.learn-nav { display: flex; justify-content: space-between; margin-top: 16px; }
+@media (max-width: 600px) { .learn-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } .learn-meta { padding: 10px 12px 14px; } .learn-desc { display: none; } }
