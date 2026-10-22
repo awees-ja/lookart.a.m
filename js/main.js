@@ -88,6 +88,7 @@ function renderPortfolioFilters(lang) {
 
 // Generate portfolio grid
 function generatePortfolio(lang = currentLanguage) {
+    requestAnimationFrame(() => document.dispatchEvent(new CustomEvent('portfolio:rendered')));
     const grid = document.getElementById('portfolioGrid');
     if (!grid) return;
 
@@ -236,23 +237,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe portfolio items
-document.querySelectorAll('.portfolio-item').forEach(item => {
-    item.style.opacity = '0';
-    observer.observe(item);
-});
-
-// Service cards animation
-document.querySelectorAll('.service-card').forEach((item, index) => {
-    item.style.opacity = '0';
-    item.style.animation = `slideInLeft 0.8s ease-out ${index * 0.1}s forwards`;
-});
-
-// Timeline items animation
-document.querySelectorAll('.timeline-item').forEach((item, index) => {
-    item.style.opacity = '0';
-    item.style.animation = `slideInLeft 0.8s ease-out ${index * 0.1}s forwards`;
-});
+// Scroll/reveal motion lives in js/motion.js
 
 // Form validation and submission
 const contactForm = document.getElementById('contactForm');
