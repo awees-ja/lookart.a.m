@@ -51,7 +51,6 @@ const portfolioData = {
     'دار الأرقم': { slug: 'dar-alarqam', categories: ['logo'], cover: coverOf('dar-alarqam'), images: pageImgs('dar-alarqam', 3) },
     'Viola': { slug: 'viola', categories: ['logo'], cover: coverOf('viola'), images: pageImgs('viola', 1) },
     'OMRA': { slug: 'omra', categories: ['logo'], cover: coverOf('omra'), images: pageImgs('omra', 1) },
-    'أرشيف الشعارات': { slug: 'logo-archive', categories: ['logo'], cover: coverOf('logo-archive'), images: pageImgs('logo-archive', 5) },
     'Look Art Motion': { slug: 'lookart-promo', categories: ['motion'], cover: coverOf('lookart-promo'), video: `${PORTFOLIO_BASE}lookart-promo/video.mp4`, images: [] },
     'HQ Motor Service': { slug: 'hq-motor-service', categories: ['social'], cover: coverOf('hq-motor-service'), images: pageImgs('hq-motor-service', 10) },
     'مدرسة أتاكوي': { slug: 'atakoy-driving-school', categories: ['social'], cover: coverOf('atakoy-driving-school'), images: pageImgs('atakoy-driving-school', 3) },
