@@ -4,7 +4,7 @@ const PORTFOLIO_BASE = new URL('assets/portfolio/', document.baseURI).pathname;
 const pageImgs = (slug, count) => Array.from({ length: count }, (_, i) => `${PORTFOLIO_BASE}${slug}/page-${i + 1}.jpg`);
 const coverOf = (slug) => `${PORTFOLIO_BASE}${slug}/cover.jpg`;
 
-// categories: identity | print (المطبوعات والتغليف) | logo | social
+// categories: identity | print (المطبوعات والتغليف) | logo | social | motion (video: path to mp4)
 const portfolioData = {
     // مرتبة من الأقوى: الهويات البصرية، ثم المطبوعات والتغليف، ثم الشعارات، ثم السوشال ميديا
     'Arabo 212': { slug: 'arabo-212', categories: ['identity'], cover: coverOf('arabo-212'), images: pageImgs('arabo-212', 7) },
@@ -41,10 +41,11 @@ const portfolioData = {
     'Viola': { slug: 'viola', categories: ['logo'], cover: coverOf('viola'), images: pageImgs('viola', 1) },
     'OMRA': { slug: 'omra', categories: ['logo'], cover: coverOf('omra'), images: pageImgs('omra', 1) },
     'أرشيف الشعارات': { slug: 'logo-archive', categories: ['logo'], cover: coverOf('logo-archive'), images: pageImgs('logo-archive', 5) },
+    'Look Art Motion': { slug: 'lookart-promo', categories: ['motion'], cover: coverOf('lookart-promo'), video: `${PORTFOLIO_BASE}lookart-promo/video.mp4`, images: [] },
     'HQ Motor Service': { slug: 'hq-motor-service', categories: ['social'], cover: coverOf('hq-motor-service'), images: pageImgs('hq-motor-service', 5) }
 };
 
-const PORTFOLIO_FILTERS = ['all', 'identity', 'print', 'logo', 'social'];
+const PORTFOLIO_FILTERS = ['all', 'identity', 'print', 'logo', 'social', 'motion'];
 let portfolioFilter = 'all';
 
 function escapeHTML(s) {
@@ -89,7 +90,7 @@ function generatePortfolio(lang = currentLanguage) {
         const tags = data.categories.map(c => `<span class="portfolio-tag">${escapeHTML(t(`portfolio.filter.${c}`, lang))}</span>`).join('');
 
         item.innerHTML = `
-            <div class="portfolio-image">
+            <div class="portfolio-image${data.video ? ' is-video' : ''}">
                 <img src="${cover}" alt="${escapeHTML(projectName)}" loading="lazy">
                 <div class="portfolio-overlay">
                     <span class="view-project">${escapeHTML(t('portfolio.view', lang))}</span>
@@ -124,14 +125,16 @@ function showProjectDetails(projectName, data, lang = currentLanguage) {
     const modal = document.createElement('div');
     modal.className = 'project-modal';
 
-    const imagesHTML = data.images.map(img => `<img src="${img}" alt="${escapeHTML(projectName)}" loading="lazy">`).join('');
+    const imagesHTML = data.video
+        ? `<video src="${data.video}" poster="${data.cover || ''}" controls autoplay muted loop playsinline preload="metadata"></video>`
+        : data.images.map(img => `<img src="${img}" alt="${escapeHTML(projectName)}" loading="lazy">`).join('');
     const waText = encodeURIComponent(t('portfolio.waMessage', lang).replace('{name}', projectName));
 
     modal.innerHTML = `
         <div class="modal-content">
             <button class="modal-close" aria-label="Close">&times;</button>
             <h2><bdi>${escapeHTML(projectName)}</bdi></h2>
-            <div class="project-gallery${data.images.length === 1 ? ' single' : ''}">
+            <div class="project-gallery${data.video ? ' video' : (data.images.length === 1 ? ' single' : '')}">
                 ${imagesHTML}
             </div>
             <div class="project-actions">

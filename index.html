@@ -6,7 +6,7 @@
     <meta name="description" content="Look Art - استوديو هويات بصرية للعلامات التجارية بقيادة أويس الجرود في إسطنبول. هويات متكاملة وتغليف ومحتوى بصري للمطاعم والكافيهات والشركات">
     <meta name="keywords" content="هوية بصرية, استوديو هويات بصرية, علامة تجارية, brand identity, branding studio, visual identity, packaging design, Istanbul">
     <meta name="author" content="Look Art - Awees Aljaroud">
-    <meta property="og:title" content="Look Art - استوديو هويات بصرية للعلامات التجارية">
+    <meta property="og:title" content="Look Art Design Studio - استوديو تصميم هويات بصرية">
     <meta property="og:description" content="استوديو هويات بصرية للعلامات التجارية بقيادة أويس الجرود، مع أكثر من 9 سنوات خبرة">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://awees-ja.github.io/lookart.a.m/">
@@ -19,7 +19,7 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <title>Look Art | استوديو هويات بصرية وعلامات تجارية</title>
+    <title>Look Art Design Studio | استوديو تصميم هويات بصرية</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,8 +36,8 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a class="logo" href="#" aria-label="Look Art Graphic Design">
-                <img class="logo-img" src="logo-horizontal.svg" alt="Look Art Graphic Design" width="130" height="48">
+            <a class="logo" href="#" aria-label="Look Art Design Studio">
+                <img class="logo-img" src="logo-horizontal.svg" alt="Look Art Design Studio" width="130" height="48">
             </a>
             <div class="nav-links" id="navLinks">
                 <a href="#about" class="nav-link" data-i18n="nav.about">عن الاستوديو</a>
@@ -174,10 +174,15 @@
                     <p data-i18n="services.s5.desc">تصاميم احترافية للمطبوعات والعبوات</p>
                 </div>
 
-                <div class="service-card coming-soon">
+                <div class="service-card">
                     <div class="service-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.296 3.464 3.02 3.956" /><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3z" /><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m6.18 5.276 3.1 3.899" /></svg></div>
                     <h3 data-i18n="services.s6.title">الموشن جرافيك</h3>
-                    <p data-i18n="services.s6.desc">قريباً - خدمة متقدمة من الموشن جرافيك المتخصصة</p>
+                    <p data-i18n="services.s6.desc">فيديوهات متحركة تشرح خدماتك ومنتجاتك بأسلوب جذاب يتوافق مع هويتك</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2" /><path d="m10 7 5 3-5 3z" /><path d="M8 21h8" /><path d="M12 17v4" /></svg></div>
+                    <h3 data-i18n="services.s7.title">المونتاج</h3>
+                    <p data-i18n="services.s7.desc">مونتاج فيديوهات الإعلانات والريلز والمحتوى بإيقاع احترافي وهوية بصرية موحدة</p>
                 </div>
             </div>
         </div>
@@ -264,13 +269,15 @@
 
                         <div class="form-group">
                             <select id="service" name="service" required>
-                                <option value="">اختر الخدمة</option>
-                                <option value="branding">هوية بصرية</option>
-                                <option value="logo">تصميم شعار</option>
-                                <option value="rebranding">إعادة تصميم هوية</option>
-                                <option value="social">تصاميم وسائل التواصل</option>
-                                <option value="packaging">تصميم مطبوعات</option>
-                                <option value="other">أخرى</option>
+                                <option value="" data-i18n="form.opt.choose">اختر الخدمة</option>
+                                <option value="branding" data-i18n="form.opt.branding">هوية بصرية</option>
+                                <option value="logo" data-i18n="form.opt.logo">تصميم شعار</option>
+                                <option value="rebranding" data-i18n="form.opt.rebranding">إعادة تصميم هوية</option>
+                                <option value="social" data-i18n="form.opt.social">تصاميم السوشال ميديا</option>
+                                <option value="packaging" data-i18n="form.opt.print">المطبوعات والتغليف</option>
+                                <option value="motion" data-i18n="form.opt.motion">موشن جرافيك</option>
+                                <option value="editing" data-i18n="form.opt.editing">مونتاج فيديو</option>
+                                <option value="other" data-i18n="form.opt.other">أخرى</option>
                             </select>
                             <label for="service" data-i18n="form.service">نوع الخدمة</label>
                         </div>
@@ -343,7 +350,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <img class="footer-logo" src="logo-horizontal.svg" alt="Look Art Graphic Design" width="150" height="55">
+                    <img class="footer-logo" src="logo-horizontal.svg" alt="Look Art Design Studio" width="150" height="55">
                     <p data-i18n="footer.tagline">استوديو هويات بصرية للعلامات التجارية، بقيادة أويس الجرود</p>
                 </div>
 

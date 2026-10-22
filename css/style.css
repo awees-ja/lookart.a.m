@@ -1299,3 +1299,18 @@ html[dir="rtl"] .info-icon { margin: 0 0 14px 0; }
 /* Keep numbers/Latin names in their natural order inside RTL text */
 .info-link[dir="ltr"] { unicode-bidi: isolate; }
 .portfolio-info h3 bdi, .project-modal h2 bdi { unicode-bidi: isolate; }
+
+/* ---- 2026-10 updates ---- */
+@media (max-width: 768px) {
+    .hero-stats { grid-template-columns: repeat(3, 1fr) !important; gap: 8px; }
+    .hero-stats .stat-number { font-size: 1.9rem; }
+    .hero-stats .stat-label { font-size: .8rem; }
+}
+.portfolio-image.is-video { position: relative; }
+.portfolio-image.is-video::after { content: "▶"; position: absolute; inset: auto auto 14px 14px; width: 44px; height: 44px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; background: rgba(123,79,251,.92); color: #fff; font-size: 16px; padding-left: 3px; box-shadow: 0 6px 20px rgba(0,0,0,.35); }
+.project-gallery.video { display: flex; justify-content: center; }
+.project-gallery.video video { width: 100%; max-width: 420px; max-height: 75vh; border-radius: 12px; background: #000; }
+@media (min-width: 1025px) {
+    .services-grid .service-card:last-child:nth-child(3n+1) { grid-column: 2; }
+}
