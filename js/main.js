@@ -54,6 +54,8 @@ const portfolioData = {
     'Look Art Motion': { slug: 'lookart-promo', categories: ['motion'], cover: coverOf('lookart-promo'), video: `${PORTFOLIO_BASE}lookart-promo/video.mp4`, images: [] },
     'HQ Motor Service': { slug: 'hq-motor-service', categories: ['social'], cover: coverOf('hq-motor-service'), images: pageImgs('hq-motor-service', 10) },
     'مدرسة أتاكوي': { slug: 'atakoy-driving-school', categories: ['social'], cover: coverOf('atakoy-driving-school'), images: pageImgs('atakoy-driving-school', 3) },
+    'Zanussi Merkezi': { slug: 'zanussi-merkezi', categories: ['social'], cover: coverOf('zanussi-merkezi'), images: pageImgs('zanussi-merkezi', 2) },
+    'د. زياد مصفرة': { slug: 'dr-ziad-masfara', categories: ['social'], cover: coverOf('dr-ziad-masfara'), images: pageImgs('dr-ziad-masfara', 1) },
     'نادي القصور': { slug: 'alqusour-gym', categories: ['social'], cover: coverOf('alqusour-gym'), images: pageImgs('alqusour-gym', 1) },
     'Look Art — سوشال': { slug: 'lookart-social', categories: ['social'], cover: coverOf('lookart-social'), images: pageImgs('lookart-social', 2) }
 };

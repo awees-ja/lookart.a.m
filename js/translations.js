@@ -85,6 +85,8 @@ const translations = {
         'portfolio.projects.Look Art — سوشال': 'تصاميم سوشال ميديا لحسابات استوديو Look Art',
         'portfolio.projects.Miray Jalkama': 'هوية بصرية ومحتوى سوشال ميديا لمركز ميراي جلقمة للدعم النفسي للأطفال في إسطنبول',
         'portfolio.projects.دار الأرقم': 'تصميم شعار دار الأرقم بن أبي الأرقم الشرعية — منبج، تأسست 1977',
+        'portfolio.projects.Zanussi Merkezi': 'تصاميم سوشال ميديا لمركز زانوسي لصيانة المكيفات في إسطنبول',
+        'portfolio.projects.د. زياد مصفرة': 'تصميم إعلان مواعيد عيادات الدكتور زياد مصفرة — جراحة عصبية',
         'portfolio.projects.Firas A.M. Agha': 'ملف تعريفي مطبوع لمهندس معماري',
         'portfolio.projects.Look Art Motion': 'فيديو موشن جرافيك تعريفي لخدمات استوديو Look Art',
 
@@ -239,7 +241,9 @@ const translations = {
             'نادي القصور': 'Opening announcement design for Al-Qusour gym',
             'Look Art — سوشال': 'Social media designs for the Look Art studio accounts',
             'Miray Jalkama': 'Brand identity and social media for Miray Jalkama, a child psychological support centre in Istanbul',
-            'دار الأرقم': 'Logo design for Dar Al-Arqam Islamic school — Manbij, est. 1977'
+            'دار الأرقم': 'Logo design for Dar Al-Arqam Islamic school — Manbij, est. 1977',
+            'Zanussi Merkezi': 'Social media designs for Zanussi Merkezi air-conditioning service in Istanbul',
+            'د. زياد مصفرة': 'Clinic schedule post for Dr. Ziad Masfara, neurosurgeon'
         },
         'services.title': 'Services <span class="highlight">Offered</span>',
         'services.subtitle': 'Comprehensive range of professional design services',
@@ -391,7 +395,9 @@ const translations = {
             'نادي القصور': 'Al-Qusour spor salonu açılış duyurusu tasarımı',
             'Look Art — سوشال': 'Look Art stüdyo hesapları için sosyal medya tasarımları',
             'Miray Jalkama': 'İstanbul\'daki çocuk psikolojik destek merkezi Miray Jalkama için marka kimliği ve sosyal medya',
-            'دار الأرقم': 'Dar Al-Arqam şer\'i okulu için logo tasarımı — Menbiç, 1977'
+            'دار الأرقم': 'Dar Al-Arqam şer\'i okulu için logo tasarımı — Menbiç, 1977',
+            'Zanussi Merkezi': 'İstanbul\'daki Zanussi Merkezi klima servisi için sosyal medya tasarımları',
+            'د. زياد مصفرة': 'Beyin cerrahı Dr. Ziad Masfara için muayene saatleri tasarımı'
         },
         'services.title': 'Sunulan <span class="highlight">Hizmetler</span>',
         'services.subtitle': 'Kapsamlı profesyonel tasarım hizmetleri',
