@@ -14,7 +14,7 @@
     const groups = [
         ['.section-title', 0], ['.section-subtitle', 0], ['.about-content p', 90], ['.feature', 90],
         ['.portfolio-filters', 0], ['.service-card', 80], ['.timeline-item', 110],
-        ['.info-card', 80], ['.learn-card', 70], ['.contact-form-wrapper', 0], ['.footer-section', 90]
+        ['.info-card', 80], ['.learn-folder', 0], ['.contact-form-wrapper', 0], ['.footer-section', 90]
     ];
     const io = reduce ? null : new IntersectionObserver((entries) => {
         entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
@@ -30,7 +30,7 @@
         });
     }
     groups.forEach(([s, t]) => arm(s, t));
-    document.addEventListener('learn:rendered', () => arm('.learn-card', 70));
+    document.addEventListener('learn:rendered', () => arm('.learn-folder', 0));
 
     /* ---------- Portfolio cards: stagger on every render/filter ---------- */
     function armCards() {
