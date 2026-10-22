@@ -49,6 +49,7 @@ const portfolioData = {
     'Space': { slug: 'space-stickers', categories: ['print'], cover: coverOf('space-stickers'), images: pageImgs('space-stickers', 1) },
     'Firas A.M. Agha': { slug: 'firas-agha-brochure', categories: ['print'], cover: coverOf('firas-agha-brochure'), images: pageImgs('firas-agha-brochure', 1) },
     'دار الأرقم': { slug: 'dar-alarqam', categories: ['logo'], cover: coverOf('dar-alarqam'), images: pageImgs('dar-alarqam', 3) },
+    'ثقة': { slug: 'theqa', categories: ['logo'], cover: coverOf('theqa'), images: pageImgs('theqa', 3) },
     'Viola': { slug: 'viola', categories: ['logo'], cover: coverOf('viola'), images: pageImgs('viola', 1) },
     'OMRA': { slug: 'omra', categories: ['logo'], cover: coverOf('omra'), images: pageImgs('omra', 1) },
     'Look Art Motion': { slug: 'lookart-promo', categories: ['motion'], cover: coverOf('lookart-promo'), video: `${PORTFOLIO_BASE}lookart-promo/video.mp4`, images: [] },
