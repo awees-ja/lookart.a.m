@@ -1468,3 +1468,6 @@ html[dir="ltr"] .scroll-progress { transform-origin: left; }
 .learn-modal .project-gallery.video video { max-height: 62vh; width: auto; max-width: 100%; }
 @media (max-width: 760px) { .learn-topics { display: none; } .learn-modal .project-gallery.video video { max-height: 68vh; } }
 .learn-share { display: flex; justify-content: center; margin-top: 14px; }
+.learn-modal .project-gallery.video { display: flex; justify-content: center; min-height: 200px; }
+.learn-modal .project-gallery.video video { height: min(62vh, 640px); width: auto; aspect-ratio: 9 / 16; max-width: 100%; max-height: none; flex: 0 0 auto; background: #000; border-radius: 12px; }
+@media (max-width: 760px) { .learn-modal .project-gallery.video video { height: auto; width: 100%; } }
