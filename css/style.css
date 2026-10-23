@@ -1467,3 +1467,4 @@ html[dir="ltr"] .scroll-progress { transform-origin: left; }
 }
 .learn-modal .project-gallery.video video { max-height: 62vh; width: auto; max-width: 100%; }
 @media (max-width: 760px) { .learn-topics { display: none; } .learn-modal .project-gallery.video video { max-height: 68vh; } }
+.learn-share { display: flex; justify-content: center; margin-top: 14px; }

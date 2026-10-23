@@ -16,9 +16,9 @@
     const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
     const T = {
-        ar: { series: 'سلسلة', name: 'كيف تشتغل مع Claude', count: '9 حلقات قصيرة · أقل من 30 ثانية للحلقة', open: 'شاهد السلسلة', ep: 'الحلقة', back: 'كل الحلقات' },
-        en: { series: 'Series', name: 'How to work with Claude', count: '9 short episodes · under 30 seconds each', open: 'Watch the series', ep: 'Episode', back: 'All episodes' },
-        tr: { series: 'Seri', name: 'Claude ile nasıl çalışılır', count: '9 kısa bölüm · her biri 30 saniyeden kısa', open: 'Seriyi izle', ep: 'Bölüm', back: 'Tüm bölümler' }
+        ar: { series: 'سلسلة', name: 'كيف تشتغل مع Claude', count: '9 حلقات قصيرة · أقل من 30 ثانية للحلقة', open: 'شاهد السلسلة', ep: 'الحلقة', back: 'كل الحلقات', copy: 'نسخ رابط الحلقة', copied: 'تم النسخ' },
+        en: { series: 'Series', name: 'How to work with Claude', count: '9 short episodes · under 30 seconds each', open: 'Watch the series', ep: 'Episode', back: 'All episodes', copy: 'Copy episode link', copied: 'Copied' },
+        tr: { series: 'Seri', name: 'Claude ile nasıl çalışılır', count: '9 kısa bölüm · her biri 30 saniyeden kısa', open: 'Seriyi izle', ep: 'Bölüm', back: 'Tüm bölümler', copy: 'Bölüm bağlantısını kopyala', copied: 'Kopyalandı' }
     };
     const tx = () => T[lang()] || T.ar;
     const num = i => String(i + 1).padStart(2, '0');
@@ -41,7 +41,7 @@
         const m = document.createElement('div'); m.className = 'project-modal learn-modal';
         m.innerHTML = `<div class="modal-content"><button class="modal-close" aria-label="Close">&times;</button><div class="learn-body"></div></div>`;
         document.body.appendChild(m); m.style.display = 'flex';
-        const close = () => { m.remove(); document.removeEventListener('keydown', key); };
+        const close = () => { m.remove(); document.removeEventListener('keydown', key); if (/^#ep\d$/.test(location.hash)) history.replaceState(null, '', '#learn'); };
         const key = e => { if (e.key === 'Escape') close(); };
         document.addEventListener('keydown', key);
         m.querySelector('.modal-close').addEventListener('click', close);
@@ -65,13 +65,26 @@
         body.innerHTML = `<button class="filter-btn learn-back" type="button">‹ ${t.back}</button>
             <h2><span class="learn-ep">${t.ep} ${num(i)}</span><br>${esc(ti)}</h2><p class="learn-desc">${esc(d)}</p>
             <div class="project-gallery video"><video src="${BASE}ep${i + 1}.mp4" poster="${BASE}ep${i + 1}.jpg" controls autoplay playsinline preload="metadata"></video></div>
+            <div class="learn-share"><button class="filter-btn learn-copy" type="button">🔗 ${t.copy}</button></div>
             <div class="learn-nav">${i > 0 ? `<button class="filter-btn" data-go="${i - 1}">‹ ${num(i - 1)}</button>` : '<span></span>'}
             ${i < EP.length - 1 ? `<button class="filter-btn" data-go="${i + 1}">${num(i + 1)} ›</button>` : '<span></span>'}</div>`;
-        body.querySelector('.learn-back').addEventListener('click', () => openList(body));
+        body.querySelector('.learn-back').addEventListener('click', () => { history.replaceState(null, '', '#learn'); openList(body); });
+        history.replaceState(null, '', '#ep' + (i + 1));
+        body.querySelector('.learn-copy').addEventListener('click', async (ev) => {
+            const url = location.origin + location.pathname + '#ep' + (i + 1);
+            try { await navigator.clipboard.writeText(url); } catch (e) { prompt('', url); }
+            ev.currentTarget.textContent = '✓ ' + t.copied;
+        });
         body.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => play(body, +b.dataset.go)));
         if (typeof trackEvent === 'function') trackEvent('view_tutorial', { episode: i + 1 });
     }
 
-    document.addEventListener('DOMContentLoaded', render);
+    function fromHash() {
+        const m = location.hash.match(/^#ep([1-9])$/); if (!m) return;
+        const sec = document.getElementById('learn'); if (sec) sec.scrollIntoView();
+        if (!document.querySelector('.learn-modal')) play(shell(), +m[1] - 1);
+    }
+    document.addEventListener('DOMContentLoaded', () => { render(); setTimeout(fromHash, 300); });
+    addEventListener('hashchange', fromHash);
     document.addEventListener('click', e => { if (e.target.closest && e.target.closest('.lang-btn')) setTimeout(render, 30); });
 })();
